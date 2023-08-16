@@ -20,11 +20,11 @@ public class CsvGeneratorImpl implements CsvGenerator {
         String tempDir = System.getProperty(JAVA_TMP_DIR);
         String csvFileName = String.valueOf(new Timestamp(System.currentTimeMillis()).getTime());
         File csvFile = new File(tempDir + csvFileName + CSV_SUFFIX);
-
         try (PrintWriter pw = new PrintWriter(csvFile)) {
             pw.println(numbers);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
+        log.info("Csv file created: {}", csvFile);
     }
 }
