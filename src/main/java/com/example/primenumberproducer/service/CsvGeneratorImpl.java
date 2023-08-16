@@ -25,6 +25,6 @@ public class CsvGeneratorImpl implements CsvGenerator {
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
-        log.info("Csv file created: {}", csvFile);
+        log.info("Csv file created: {}", csvFile.getAbsolutePath());
     }
 }
