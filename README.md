@@ -3,8 +3,12 @@
 ### Create and start using docker-compose
 
 * Clone both producer and consumer repositories:
+```
 https://github.com/stuckata/prime-number-producer
+```
+```
 https://github.com/stuckata/prime-number-consumer
+```
 
 * Create .jar archives needed by docker-compose by running for each ms these Gradle tasks:
 ```
@@ -23,8 +27,8 @@ docker-compose up -d
 
 ### Check created csv files one with produced 100 random numbers and the other with prime numbers
 * On creation of csv file a log with path and file name is logged respectively in producer and consumer 
-![img.png](img.png)
-![img_1.png](img_1.png)
+![img.png](docs/img.png)
+![img_1.png](docs/img_1.png)
 * Copy it from within container to your local drive using this command:
 ```
 docker cp <containerId>:/file/path/within/container /host/path/target
